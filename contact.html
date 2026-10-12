@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MavutiHub | Contact Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="CSS/clubs-style.css">
+  <script src="JS/jscript.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar glass container" aria-label="Main navigation">
+      <a href="index.html" class="logo">Mavuti<span>Hub</span><b>.</b></a>
+      <button id="menuToggle" class="menu-toggle" type="button" aria-label="Toggle navigation" aria-controls="navLinks" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="navLinks" class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="explore.html" class="nav-link">Explore</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
+      </ul>
+      <a href="explore.html" class="btn btn-primary nav-cta">Find a Club <i class="fa-solid fa-arrow-right"></i></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container reveal">
+        <span class="section-tag">LET'S TALK</span>
+        <h1>Get in <span>Touch.</span></h1>
+        <p>Have a question, suggestion or idea for MavutiHub? We'd love to hear what you think.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-layout">
+        <div class="contact-info reveal">
+          <span class="section-tag">CONNECT WITH US</span>
+          <h2>Let's start a <span>conversation.</span></h2>
+          <p>
+            MavutiHub is designed around student communities, and
+            your ideas matter. Whether you want to suggest a society,
+            ask about a listing or share feedback, this is the place to begin.
+          </p>
+
+          <div class="contact-info-card glass">
+            <span class="contact-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </span>
+            <div>
+              <h3>Campus Location</h3>
+              <p>Vaal University of Technology<br>Vanderbijlpark, South Africa</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card glass">
+            <span class="contact-icon">
+              <i class="fa-solid fa-comments"></i>
+            </span>
+            <div>
+              <h3>Questions & Suggestions</h3>
+              <p>Use the demonstration contact form to prepare your message.</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card glass">
+            <span class="contact-icon gold-icon">
+              <i class="fa-solid fa-lightbulb"></i>
+            </span>
+            <div>
+              <h3>Suggest a Club</h3>
+              <p>Have an idea for another community that could be included in the directory?</p>
+            </div>
+          </div>
+
+          <h3 class="contact-social-heading">Follow MavutiHub</h3>
+          <div class="social-icons">
+            <a href="#" data-social-placeholder class="social-link" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" data-social-placeholder class="social-link" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" data-social-placeholder class="social-link" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-card glass reveal">
+          <div class="form-header">
+            <span class="form-icon"><i class="fa-solid fa-paper-plane"></i></span>
+            <h2>Send Us a Message</h2>
+            <p>Fill in the form below. This is currently a demonstration feature.</p>
+          </div>
+
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="firstName" placeholder="Your first name" required>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="lastName" placeholder="Your last name" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">What is your message about?</label>
+              <select id="subject" name="subject" required>
+                <option value="">Choose a subject</option>
+                <option value="General Enquiry">General Enquiry</option>
+                <option value="Club Information">Club Information</option>
+                <option value="Suggest a Club">Suggest a Club</option>
+                <option value="Website Feedback">Website Feedback</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="6"
+                placeholder="Tell us what you would like to share..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">
+              Prepare Message <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <p id="form-feedback" class="form-feedback" role="status"></p>
+            <p class="form-disclaimer">
+              This form is for demonstration only. Messages are not sent or stored.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <span class="cta-kicker">DISCOVER MORE</span>
+          <h2>Find your next <em>community.</em></h2>
+          <p>Browse the club directory and explore the interests that make campus life exciting.</p>
+          <a href="explore.html" class="btn btn-gold">
+            Explore Clubs <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Mavuti<span>Hub</span><b>.</b></a>
+        <p>Find your people. Make your mark. Discover student communities and make the most of campus life.</p>
+        <div class="social-icons">
+          <a href="#" data-social-placeholder class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" data-social-placeholder class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" data-social-placeholder class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explore.html">Explore Clubs</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Find Us</h3>
+        <p><i class="fa-solid fa-location-dot"></i> Vaal University of Technology</p>
+        <p>Vanderbijlpark, South Africa</p>
+        <a href="contact.html" class="footer-contact">Get in Touch →</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span class="current-year">2026</span> MavutiHub. All rights reserved.</p>
+      <p>Created for the VUT student community <span class="footer-heart">♥</span></p>
+    </div>
+  </footer>
+</body>
+</html>
