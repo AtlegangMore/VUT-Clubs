@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="IMAGES/VUT_logo-TM.png">
   <title>MavutiHub | Contact Us</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="CSS/clubs-style.css">
@@ -12,7 +13,10 @@
 <body>
   <header class="site-header">
     <nav class="navbar glass container" aria-label="Main navigation">
-      <a href="index.html" class="logo">Mavuti<span>Hub</span><b>.</b></a>
+      <a href="index.html" class="logo" aria-label="MavutiHub homepage">
+        <img src="IMAGES/VUT_logo-TM.png" alt="VUT logo" class="brand-logo">
+        <span class="logo-wordmark">Mavuti<span>Hub</span></span>
+      </a>
       <button id="menuToggle" class="menu-toggle" type="button" aria-label="Toggle navigation" aria-controls="navLinks" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -22,12 +26,15 @@
         <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
       </ul>
-      <a href="explore.html" class="btn btn-primary nav-cta">Find a Club <i class="fa-solid fa-arrow-right"></i></a>
     </nav>
   </header>
 
   <main>
-    <section class="page-hero">
+    <section class="page-hero has-slideshow">
+      <div class="hero-slideshow" aria-hidden="true">
+        <img class="is-active" alt="">
+        <img alt="">
+      </div>
       <div class="container reveal">
         <span class="section-tag">LET'S TALK</span>
         <h1>Get in <span>Touch.</span></h1>
@@ -52,7 +59,8 @@
             </span>
             <div>
               <h3>Campus Location</h3>
-              <p>Vaal University of Technology<br>Vanderbijlpark, South Africa</p>
+              <p>Vaal University of Technology<br>Andries Potgieter Boulevard<br>Vanderbijlpark, 1911<br>South Africa</p>
+              <p>Postal: Private Bag X021, Vanderbijlpark, 1911</p>
             </div>
           </div>
 
@@ -162,12 +170,17 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="logo">Mavuti<span>Hub</span><b>.</b></a>
+        <a href="index.html" class="logo footer-logo" aria-label="MavutiHub homepage">
+          <img src="https://vut.ac.za/wp-content/uploads/2026/03/Vaal-University-of-Technology-60th-logo-scaled.webp" alt="VUT logo" class="brand-logo footer-brand-logo">
+          <span class="logo-wordmark">Mavuti<span>Hub</span></span>
+        </a>
         <p>Find your people. Make your mark. Discover student communities and make the most of campus life.</p>
         <div class="social-icons">
-          <a href="#" data-social-placeholder class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" data-social-placeholder class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" data-social-placeholder class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://x.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Open X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.tiktok.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://www.youtube.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
       <div>
@@ -182,13 +195,14 @@
       <div>
         <h3>Find Us</h3>
         <p><i class="fa-solid fa-location-dot"></i> Vaal University of Technology</p>
-        <p>Vanderbijlpark, South Africa</p>
+        <p>Andries Potgieter Boulevard<br>Vanderbijlpark, 1911<br>South Africa</p>
+        <p>Postal: Private Bag X021, Vanderbijlpark, 1911</p>
         <a href="contact.html" class="footer-contact">Get in Touch →</a>
       </div>
     </div>
     <div class="container footer-bottom">
       <p>© <span class="current-year">2026</span> MavutiHub. All rights reserved.</p>
-      <p>Created for the VUT student community <span class="footer-heart">♥</span></p>
+      <p>Created for the VUT student community</p>
     </div>
   </footer>
 </body>

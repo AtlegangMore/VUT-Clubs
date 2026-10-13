@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Discover clubs, societies and student communities at Vaal University of Technology.">
+  <link rel="icon" type="image/png" href="IMAGES/VUT_logo-TM.png">
   <title>MavutiHub | Find Your People</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -15,7 +16,10 @@
 
   <header class="site-header">
     <nav class="navbar glass container" aria-label="Main navigation">
-      <a href="index.html" class="logo">Mavuti<span>Hub</span><b>.</b></a>
+      <a href="index.html" class="logo" aria-label="MavutiHub homepage">
+        <img src="IMAGES/VUT_logo-TM.png" alt="VUT logo" class="brand-logo">
+        <span class="logo-wordmark">Mavuti<span>Hub</span></span>
+      </a>
 
       <button id="menuToggle" class="menu-toggle" type="button"
         aria-label="Toggle navigation" aria-controls="navLinks" aria-expanded="false">
@@ -28,18 +32,17 @@
         <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
-
-      <a href="explore.html" class="btn btn-primary nav-cta">
-        Find a Club <i class="fa-solid fa-arrow-right"></i>
-      </a>
     </nav>
   </header>
 
   <main>
-    <section class="hero container">
+    <section class="hero container has-slideshow">
+      <div class="hero-slideshow" aria-hidden="true">
+        <img class="is-active" alt="">
+        <img alt="">
+      </div>
       <div class="hero-content reveal">
         <span class="eyebrow">
-          <span class="eyebrow-dot"></span>
           YOUR CAMPUS. YOUR COMMUNITY.
         </span>
 
@@ -63,14 +66,20 @@
         <div class="hero-socials">
           <span>Follow MavutiHub</span>
           <div class="social-icons">
-            <a href="#" class="social-link" data-social-placeholder aria-label="Instagram">
+            <a href="https://www.instagram.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram">
               <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="#" class="social-link" data-social-placeholder aria-label="Facebook">
+            <a href="https://www.facebook.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook">
               <i class="fa-brands fa-facebook-f"></i>
             </a>
-            <a href="#" class="social-link" data-social-placeholder aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin-in"></i>
+            <a href="https://x.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Open X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.tiktok.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://www.youtube.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube">
+              <i class="fa-brands fa-youtube"></i>
             </a>
           </div>
         </div>
@@ -78,7 +87,7 @@
 
       <div class="hero-visual reveal">
         <div class="hero-photo-wrap">
-          <img src="CSS/IMAGES/clubs/hero.jpeg" alt="Campus community placeholder photograph">
+          <img src="IMAGES/clubs/hero.jpeg" alt="Campus community placeholder photograph">
         </div>
 
         <div class="floating-card glass floating-top">
@@ -144,7 +153,7 @@
         <div class="club-grid">
           <article class="club-card glass reveal">
             <div class="club-image">
-              <img src="CSS/IMAGES/clubs/techcollective.jpeg" alt="Tech Collective placeholder" loading="lazy">
+              <img src="IMAGES/clubs/techcollective.jpeg" alt="Tech Collective placeholder" loading="lazy">
               <span class="club-number">01</span>
             </div>
             <div class="club-body">
@@ -163,7 +172,7 @@
 
           <article class="club-card glass reveal">
             <div class="club-image">
-              <img src="CSS/IMAGES/clubs/tsonga.jpeg" alt="Tsonga VUT Society placeholder" loading="lazy">
+              <img src="IMAGES/clubs/tsonga.jpeg" alt="Tsonga VUT Society placeholder" loading="lazy">
               <span class="club-number">02</span>
             </div>
             <div class="club-body">
@@ -182,7 +191,7 @@
 
           <article class="club-card glass reveal">
             <div class="club-image">
-              <img src="CSS/IMAGES/clubs/soccerclub.jpeg" alt="Sports and recreation placeholder" loading="lazy">
+              <img src="IMAGES/clubs/soccerclub.jpeg" alt="Sports and recreation placeholder" loading="lazy">
               <span class="club-number">03</span>
             </div>
             <div class="club-body">
@@ -249,9 +258,16 @@
     <section class="section spotlight-section">
       <div class="container spotlight-layout">
         <div class="spotlight-image reveal">
-          <img src="CSS/IMAGES/clubs/queer.jpeg" alt="Queer Student Association placeholder" loading="lazy">
+          <img src="IMAGES/clubs/innovation&amp;entrepreneur.jpeg" alt="Innovation and Entrepreneurship club" loading="lazy">
+          <button class="spotlight-control spotlight-prev" type="button" aria-label="Previous featured club image">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <button class="spotlight-control spotlight-next" type="button" aria-label="Next featured club image">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
           <span class="spotlight-badge glass">
-            <i class="fa-solid fa-heart"></i> A place to belong
+            <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+            <span id="spotlight-caption" aria-live="polite">Innovation &amp; Entrepreneurship</span>
           </span>
         </div>
 
@@ -289,23 +305,45 @@
         </div>
       </div>
     </section>
+
+    <section class="campus-facts-section" aria-labelledby="campus-facts-title">
+      <div class="campus-fact-content">
+        <h2 id="campus-facts-title">Did You Know?</h2>
+        <p id="campus-fact" class="campus-fact" aria-live="polite" aria-atomic="true">
+          VUT began in 1966 as a college for advanced technical education.
+        </p>
+        <a href="https://www.vut.ac.za/welcome/" target="_blank" rel="noopener noreferrer" class="campus-fact-source">
+          Source: Vaal University of Technology
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="logo">Mavuti<span>Hub</span><b>.</b></a>
+        <a href="index.html" class="logo footer-logo" aria-label="MavutiHub homepage">
+          <img src="https://vut.ac.za/wp-content/uploads/2026/03/Vaal-University-of-Technology-60th-logo-scaled.webp" alt="VUT logo" class="brand-logo footer-brand-logo">
+          <span class="logo-wordmark">Mavuti<span>Hub</span></span>
+        </a>
         <p>Find your people. Make your mark. Discover student communities and make the most of campus life.</p>
 
         <div class="social-icons">
-          <a href="#" class="social-link" data-social-placeholder aria-label="Instagram">
+          <a href="https://www.instagram.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="#" class="social-link" data-social-placeholder aria-label="Facebook">
+          <a href="https://www.facebook.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook">
             <i class="fa-brands fa-facebook-f"></i>
           </a>
-          <a href="#" class="social-link" data-social-placeholder aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin-in"></i>
+          <a href="https://x.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Open X">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://www.tiktok.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a href="https://www.youtube.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube">
+            <i class="fa-brands fa-youtube"></i>
           </a>
         </div>
       </div>
@@ -321,16 +359,17 @@
       </div>
 
       <div>
-        <h3>Find Us</h3>
-        <p><i class="fa-solid fa-location-dot"></i> Vaal University of Technology</p>
-        <p>Vanderbijlpark, South Africa</p>
+        <h3>Find Us </h3>
+        <p> Vaal University of Technology</p>
+        <p>Andries Potgieter Boulevard<br>Vanderbijlpark, 1911<br>South Africa</p>
+        <p>Postal: Private Bag X021, Vanderbijlpark, 1911</p>
         <a href="contact.html" class="footer-contact">Get in Touch →</a>
       </div>
     </div>
 
     <div class="container footer-bottom">
       <p>© <span class="current-year">2026</span> MavutiHub. All rights reserved.</p>
-      <p>Created for the VUT student community <span class="footer-heart">♥</span></p>
+      <p>Created for the VUT student community</p>
     </div>
   </footer>
 

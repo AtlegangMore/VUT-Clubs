@@ -9,6 +9,7 @@
   <meta name="description"
     content="Explore student clubs and societies at Vaal University of Technology through MavutiHub. Find communities that match your interests.">
 
+  <link rel="icon" type="image/png" href="IMAGES/VUT_logo-TM.png">
   <title>Explore Clubs | MavutiHub</title>
 
   <!-- Font Awesome Icons -->
@@ -29,7 +30,8 @@
     <nav class="navbar container glass" aria-label="Main navigation">
 
       <a href="index.html" class="logo" aria-label="MavutiHub homepage">
-        Mavuti<span>Hub</span><b>.</b>
+        <img src="IMAGES/VUT_logo-TM.png" alt="VUT logo" class="brand-logo">
+        <span class="logo-wordmark">Mavuti<span>Hub</span></span>
       </a>
 
       <button class="menu-toggle"
@@ -50,11 +52,6 @@
         <li><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
 
-      <a href="#club-directory" class="btn btn-primary nav-cta">
-        Find a Club
-        <i class="fa-solid fa-arrow-right"></i>
-      </a>
-
     </nav>
   </header>
 
@@ -62,11 +59,14 @@
   <main>
 
     <!-- EXPLORE HERO -->
-    <section class="page-hero">
+    <section class="page-hero has-slideshow">
+      <div class="hero-slideshow" aria-hidden="true">
+        <img class="is-active" alt="">
+        <img alt="">
+      </div>
       <div class="container">
 
         <span class="eyebrow">
-          <span class="eyebrow-dot"></span>
           EXPLORE CAMPUS COMMUNITIES
         </span>
 
@@ -170,7 +170,7 @@
           <article class="club-card glass reveal"
             data-category="technology">
             <div class="club-image">
-              <img src="CSS/IMAGES/clubs/techcollective.jpeg"
+              <img src="IMAGES/clubs/techcollective.jpeg"
                 alt="Students participating in a technology activity"
                 loading="lazy">
               <span class="club-number">01</span>
@@ -183,10 +183,17 @@
                 digital innovation, technology trends and
                 collaborative problem-solving.
               </p>
-              <a href="contact.html" class="club-link">
-                Enquire About This Club
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="club-socials" aria-label="Social media platforms">
+                <a href="https://x.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+              </div>
+              <button type="button" class="club-link join-club-button" aria-haspopup="dialog">
+                Join This Club
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
             </div>
           </article>
 
@@ -195,7 +202,7 @@
           <article class="club-card glass reveal"
             data-category="technology">
             <div class="club-image">
-              <img src="CSS/IMAGES/clubs/innovation&amp;entrepreneur.jpeg"
+              <img src="IMAGES/clubs/innovation&amp;entrepreneur.jpeg"
                 alt="Innovation and entrepreneurship activities"
                 loading="lazy">
               <span class="club-number">02</span>
@@ -208,10 +215,17 @@
                 innovation challenges and opportunities to turn
                 ideas into meaningful projects.
               </p>
-              <a href="contact.html" class="club-link">
-                Enquire About This Club
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="club-socials" aria-label="Social media platforms">
+                <a href="https://x.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+              </div>
+              <button type="button" class="club-link join-club-button" aria-haspopup="dialog">
+                Join This Club
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
             </div>
           </article>
 
@@ -220,7 +234,7 @@
           <article class="club-card glass reveal"
             data-category="culture">
             <div class="club-image">
-              <img src="CSS/IMAGES/clubs/basotho.jpeg"
+              <img src="IMAGES/clubs/basotho.jpeg"
                 alt="Basotho cultural representation"
                 loading="lazy">
               <span class="club-number">03</span>
@@ -233,10 +247,17 @@
                 cultural traditions and connections among
                 students from different backgrounds.
               </p>
-              <a href="contact.html" class="club-link">
-                Enquire About This Club
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="club-socials" aria-label="Social media platforms">
+                <a href="https://x.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+              </div>
+              <button type="button" class="club-link join-club-button" aria-haspopup="dialog">
+                Join This Club
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
             </div>
           </article>
 
@@ -245,7 +266,7 @@
           <article class="club-card glass reveal"
             data-category="culture">
             <div class="club-image">
-              <img src="CSS/IMAGES/clubs/tsonga.jpeg"
+              <img src="IMAGES/clubs/tsonga.jpeg"
                 alt="Tsonga cultural representation"
                 loading="lazy">
               <span class="club-number">04</span>
@@ -258,10 +279,17 @@
                 and cultural expression while connecting with
                 fellow students on campus.
               </p>
-              <a href="contact.html" class="club-link">
-                Enquire About This Club
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="club-socials" aria-label="Social media platforms">
+                <a href="https://x.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+              </div>
+              <button type="button" class="club-link join-club-button" aria-haspopup="dialog">
+                Join This Club
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
             </div>
           </article>
 
@@ -270,7 +298,7 @@
           <article class="club-card glass reveal"
             data-category="culture">
             <div class="club-image">
-              <img src="CSS/IMAGES/clubs/zulu.jpeg"
+              <img src="IMAGES/clubs/zulu.jpeg"
                 alt="Zulu cultural representation"
                 loading="lazy">
               <span class="club-number">05</span>
@@ -283,10 +311,17 @@
                 cultural celebrations and opportunities for
                 sharing heritage with others.
               </p>
-              <a href="contact.html" class="club-link">
-                Enquire About This Club
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="club-socials" aria-label="Social media platforms">
+                <a href="https://x.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+              </div>
+              <button type="button" class="club-link join-club-button" aria-haspopup="dialog">
+                Join This Club
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
             </div>
           </article>
 
@@ -295,7 +330,7 @@
           <article class="club-card glass reveal"
             data-category="community">
             <div class="club-image">
-              <img src="CSS/IMAGES/clubs/queer.jpeg"
+              <img src="IMAGES/clubs/queer.jpeg"
                 alt="Inclusive student community representation"
                 loading="lazy">
               <span class="club-number">06</span>
@@ -308,10 +343,17 @@
                 inclusion, awareness and meaningful connections
                 within the campus community.
               </p>
-              <a href="contact.html" class="club-link">
-                Enquire About This Club
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="club-socials" aria-label="Social media platforms">
+                <a href="https://x.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+              </div>
+              <button type="button" class="club-link join-club-button" aria-haspopup="dialog">
+                Join This Club
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
             </div>
           </article>
 
@@ -320,7 +362,7 @@
           <article class="club-card glass reveal"
             data-category="community">
             <div class="club-image">
-              <img src="CSS/IMAGES/clubs/communityoutreach.jpeg"
+              <img src="IMAGES/clubs/communityoutreach.jpeg"
                 alt="Students participating in community outreach"
                 loading="lazy">
               <span class="club-number">07</span>
@@ -333,10 +375,17 @@
                 social responsibility and opportunities to
                 make a positive difference beyond campus.
               </p>
-              <a href="contact.html" class="club-link">
-                Enquire About This Club
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="club-socials" aria-label="Social media platforms">
+                <a href="https://x.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+              </div>
+              <button type="button" class="club-link join-club-button" aria-haspopup="dialog">
+                Join This Club
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
             </div>
           </article>
 
@@ -345,7 +394,7 @@
           <article class="club-card glass reveal"
             data-category="sports">
             <div class="club-image">
-              <img src="CSS/IMAGES/clubs/soccerclub.jpeg"
+              <img src="IMAGES/clubs/soccerclub.jpeg"
                 alt="Soccer players on a football field"
                 loading="lazy">
               <span class="club-number">08</span>
@@ -358,10 +407,17 @@
                 friendly competition and staying active with
                 other students who love the game.
               </p>
-              <a href="contact.html" class="club-link">
-                Enquire About This Club
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="club-socials" aria-label="Social media platforms">
+                <a href="https://x.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+              </div>
+              <button type="button" class="club-link join-club-button" aria-haspopup="dialog">
+                Join This Club
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
             </div>
           </article>
 
@@ -370,7 +426,7 @@
           <article class="club-card glass reveal"
             data-category="sports">
             <div class="club-image">
-              <img src="CSS/IMAGES/clubs/rugby.jpeg"
+              <img src="IMAGES/clubs/rugby.jpeg"
                 alt="Rugby players during a match"
                 loading="lazy">
               <span class="club-number">09</span>
@@ -383,10 +439,17 @@
                 while exploring opportunities to participate
                 in rugby and campus sporting activities.
               </p>
-              <a href="contact.html" class="club-link">
-                Enquire About This Club
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="club-socials" aria-label="Social media platforms">
+                <a href="https://x.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+              </div>
+              <button type="button" class="club-link join-club-button" aria-haspopup="dialog">
+                Join This Club
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
             </div>
           </article>
 
@@ -395,7 +458,7 @@
           <article class="club-card glass reveal"
             data-category="sports">
             <div class="club-image">
-              <img src="CSS/IMAGES/clubs/netball.jpeg"
+              <img src="IMAGES/clubs/netball.jpeg"
                 alt="Netball players taking part in a match"
                 loading="lazy">
               <span class="club-number">10</span>
@@ -408,10 +471,17 @@
                 skills and enjoy a supportive environment
                 built around teamwork and participation.
               </p>
-              <a href="contact.html" class="club-link">
-                Enquire About This Club
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="club-socials" aria-label="Social media platforms">
+                <a href="https://x.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+              </div>
+              <button type="button" class="club-link join-club-button" aria-haspopup="dialog">
+                Join This Club
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
             </div>
           </article>
 
@@ -420,7 +490,7 @@
           <article class="club-card glass reveal"
             data-category="sports">
             <div class="club-image">
-              <img src="CSS/IMAGES/clubs/hockey.jpeg"
+              <img src="IMAGES/clubs/hockey.jpeg"
                 alt="Hockey players participating in a game"
                 loading="lazy">
               <span class="club-number">11</span>
@@ -433,10 +503,17 @@
                 coordination and fitness, and connect with
                 students who enjoy hockey.
               </p>
-              <a href="contact.html" class="club-link">
-                Enquire About This Club
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="club-socials" aria-label="Social media platforms">
+                <a href="https://x.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+              </div>
+              <button type="button" class="club-link join-club-button" aria-haspopup="dialog">
+                Join This Club
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
             </div>
           </article>
 
@@ -445,7 +522,7 @@
           <article class="club-card glass reveal"
             data-category="arts">
             <div class="club-image">
-              <img src="CSS/IMAGES/clubs/choir.jpeg"
+              <img src="IMAGES/clubs/choir.jpeg"
                 alt="Choir singers performing together"
                 loading="lazy">
               <span class="club-number">12</span>
@@ -458,10 +535,17 @@
                 collaboration through singing, rehearsals
                 and opportunities to perform.
               </p>
-              <a href="contact.html" class="club-link">
-                Enquire About This Club
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="club-socials" aria-label="Social media platforms">
+                <a href="https://x.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+              </div>
+              <button type="button" class="club-link join-club-button" aria-haspopup="dialog">
+                Join This Club
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
             </div>
           </article>
 
@@ -470,7 +554,7 @@
           <article class="club-card glass reveal"
             data-category="arts">
             <div class="club-image">
-              <img src="CSS/IMAGES/clubs/dance.jpeg"
+              <img src="IMAGES/clubs/dance.jpeg"
                 alt="Dancers performing together"
                 loading="lazy">
               <span class="club-number">13</span>
@@ -483,10 +567,17 @@
                 and creativity while connecting with other
                 students who enjoy dance.
               </p>
-              <a href="contact.html" class="club-link">
-                Enquire About This Club
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="club-socials" aria-label="Social media platforms">
+                <a href="https://x.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+              </div>
+              <button type="button" class="club-link join-club-button" aria-haspopup="dialog">
+                Join This Club
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
             </div>
           </article>
 
@@ -495,7 +586,7 @@
           <article class="club-card glass reveal"
             data-category="arts">
             <div class="club-image">
-              <img src="CSS/IMAGES/clubs/fashion.jpeg"
+              <img src="IMAGES/clubs/fashion.jpeg"
                 alt="Fashion and creative design representation"
                 loading="lazy">
               <span class="club-number">14</span>
@@ -508,10 +599,17 @@
                 creative expression and opportunities
                 to share artistic ideas.
               </p>
-              <a href="contact.html" class="club-link">
-                Enquire About This Club
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="club-socials" aria-label="Social media platforms">
+                <a href="https://x.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+              </div>
+              <button type="button" class="club-link join-club-button" aria-haspopup="dialog">
+                Join This Club
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
             </div>
           </article>
 
@@ -520,7 +618,7 @@
           <article class="club-card glass reveal"
             data-category="academic">
             <div class="club-image">
-              <img src="CSS/IMAGES/clubs/academic.jpeg"
+              <img src="IMAGES/clubs/academic.jpeg"
                 alt="Students participating in an academic activity"
                 loading="lazy">
               <span class="club-number">15</span>
@@ -533,10 +631,17 @@
                 peer learning, study support, knowledge
                 sharing and academic development.
               </p>
-              <a href="contact.html" class="club-link">
-                Enquire About This Club
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="club-socials" aria-label="Social media platforms">
+                <a href="https://x.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+              </div>
+              <button type="button" class="club-link join-club-button" aria-haspopup="dialog">
+                Join This Club
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
             </div>
           </article>
 
@@ -545,7 +650,7 @@
           <article class="club-card glass reveal"
             data-category="academic">
             <div class="club-image">
-              <img src="CSS/IMAGES/clubs/engineering.jpeg"
+              <img src="IMAGES/clubs/engineering.jpeg"
                 alt="Engineering students working on a project"
                 loading="lazy">
               <span class="club-number">16</span>
@@ -558,10 +663,17 @@
                 projects, collaboration and opportunities
                 to connect with students in technical fields.
               </p>
-              <a href="contact.html" class="club-link">
-                Enquire About This Club
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="club-socials" aria-label="Social media platforms">
+                <a href="https://x.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+              </div>
+              <button type="button" class="club-link join-club-button" aria-haspopup="dialog">
+                Join This Club
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
             </div>
           </article>
 
@@ -570,7 +682,7 @@
           <article class="club-card glass reveal"
             data-category="community">
             <div class="club-image">
-              <img src="CSS/IMAGES/clubs/hero.jpeg"
+              <img src="IMAGES/clubs/hero.jpeg"
                 alt="Students enjoying campus life"
                 loading="lazy">
               <span class="club-number">17</span>
@@ -583,10 +695,17 @@
                 experiences, social activities and opportunities
                 to build friendships outside the classroom.
               </p>
-              <a href="contact.html" class="club-link">
-                Enquire About This Club
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="club-socials" aria-label="Social media platforms">
+                <a href="https://x.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/" class="club-social-link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+              </div>
+              <button type="button" class="club-link join-club-button" aria-haspopup="dialog">
+                Join This Club
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
             </div>
           </article>
 
@@ -604,6 +723,120 @@
 
       </div>
     </section>
+
+    <dialog class="join-modal" id="join-club-modal" aria-labelledby="join-modal-title">
+      <div class="join-modal-panel">
+        <button type="button" class="join-modal-close" aria-label="Close membership form">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <div class="join-modal-header">
+          <span class="join-modal-icon" aria-hidden="true">
+            <i class="fa-solid fa-user-plus"></i>
+          </span>
+          <span class="section-tag">TAKE THE NEXT STEP</span>
+          <h2 id="join-modal-title">Join a <span>Community.</span></h2>
+          <p>Complete the details below to register your interest.</p>
+        </div>
+
+        <div class="selected-club">
+          <span>Joining</span>
+          <strong id="selected-club-name"></strong>
+        </div>
+
+        <form id="club-join-form">
+          <div class="join-form-grid">
+            <div class="form-group">
+              <label for="join-title">Title</label>
+              <select id="join-title" name="title" required>
+                <option value="">Select title</option>
+                <option value="Mr">Mr</option>
+                <option value="Ms">Ms</option>
+                <option value="Mx">Mx</option>
+                <option value="Dr">Dr</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="join-student-number">Student Number</label>
+              <input type="text" id="join-student-number" name="studentNumber"
+                autocomplete="off" required>
+            </div>
+
+            <div class="form-group">
+              <label for="join-first-name">First Name</label>
+              <input type="text" id="join-first-name" name="firstName"
+                autocomplete="given-name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="join-last-name">Last Name</label>
+              <input type="text" id="join-last-name" name="lastName"
+                autocomplete="family-name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="join-email">Student Email</label>
+              <input type="email" id="join-email" name="email"
+                placeholder="you@edu.vut.ac.za" autocomplete="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="join-phone">Phone Number</label>
+              <input type="tel" id="join-phone" name="phone"
+                autocomplete="tel" pattern="[0-9+() -]{7,20}"
+                title="Enter a phone number using digits, spaces, parentheses, +, or hyphens."
+                required>
+            </div>
+
+            <div class="form-group">
+              <label for="join-programme">Faculty / Programme</label>
+              <input type="text" id="join-programme" name="programme"
+                autocomplete="organization-title" required>
+            </div>
+
+            <div class="form-group">
+              <label for="join-year">Year of Study</label>
+              <select id="join-year" name="yearOfStudy" required>
+                <option value="">Select year</option>
+                <option value="1">First year</option>
+                <option value="2">Second year</option>
+                <option value="3">Third year</option>
+                <option value="4">Fourth year</option>
+                <option value="Postgraduate">Postgraduate</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="join-message">Why would you like to join? <span>(Optional)</span></label>
+            <textarea id="join-message" name="message" rows="3"></textarea>
+          </div>
+
+          <label class="join-consent">
+            <input type="checkbox" name="consent" required>
+            <span>I confirm that these details are accurate and agree to share them for this demo request.</span>
+          </label>
+
+          <button type="submit" class="btn btn-primary form-submit">
+            Submit Membership Request
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+          <p class="join-disclaimer">Demo only: your details are not sent or stored.</p>
+        </form>
+
+        <div class="join-success" id="join-success" role="status" hidden>
+          <span class="join-success-icon" aria-hidden="true">
+            <i class="fa-solid fa-circle-check"></i>
+          </span>
+          <h3>Request Received!</h3>
+          <p id="join-success-message"></p>
+          <button type="button" class="btn btn-primary" id="join-done">Done</button>
+        </div>
+      </div>
+    </dialog>
 
 
     <!-- CATEGORY COMPARISON TABLE -->
@@ -766,8 +999,9 @@
       <div class="footer-grid">
 
         <div class="footer-brand">
-          <a href="index.html" class="logo">
-            Mavuti<span>Hub</span><b>.</b>
+          <a href="index.html" class="logo footer-logo" aria-label="MavutiHub homepage">
+            <img src="https://vut.ac.za/wp-content/uploads/2026/03/Vaal-University-of-Technology-60th-logo-scaled.webp" alt="VUT logo" class="brand-logo footer-brand-logo">
+            <span class="logo-wordmark">Mavuti<span>Hub</span></span>
           </a>
 
           <p>
@@ -777,22 +1011,29 @@
 
           <div class="social-icons">
 
-            <a href="#" class="social-link"
-              data-social-placeholder
-              aria-label="MavutiHub Instagram">
+            <a href="https://www.instagram.com/" class="social-link" target="_blank"
+              rel="noopener noreferrer" aria-label="Open Instagram">
               <i class="fa-brands fa-instagram"></i>
             </a>
 
-            <a href="#" class="social-link"
-              data-social-placeholder
-              aria-label="MavutiHub Facebook">
+            <a href="https://www.facebook.com/" class="social-link" target="_blank"
+              rel="noopener noreferrer" aria-label="Open Facebook">
               <i class="fa-brands fa-facebook-f"></i>
             </a>
 
-            <a href="#" class="social-link"
-              data-social-placeholder
-              aria-label="MavutiHub LinkedIn">
-              <i class="fa-brands fa-linkedin-in"></i>
+            <a href="https://x.com/" class="social-link" target="_blank"
+              rel="noopener noreferrer" aria-label="Open X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/" class="social-link" target="_blank"
+              rel="noopener noreferrer" aria-label="Open TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+            <a href="https://www.youtube.com/" class="social-link" target="_blank"
+              rel="noopener noreferrer" aria-label="Open YouTube">
+              <i class="fa-brands fa-youtube"></i>
             </a>
 
           </div>
@@ -811,15 +1052,12 @@
 
 
         <div>
-          <h3>Discover MavutiHub</h3>
-
-          <p>
-            Explore the communities, activities and
-            interests that make campus life meaningful.
-          </p>
-
+          <h3>Find Us</h3>
+          <p><i class="fa-solid fa-location-dot"></i> Vaal University of Technology</p>
+          <p>Andries Potgieter Boulevard<br>Vanderbijlpark, 1911<br>South Africa</p>
+          <p>Postal: Private Bag X021, Vanderbijlpark, 1911</p>
           <a href="contact.html" class="footer-contact">
-            Contact Us
+            Get in Touch
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
@@ -833,10 +1071,7 @@
           MavutiHub. All rights reserved.
         </p>
 
-        <p>
-          Made with <span class="footer-heart">&#10084;</span>
-          for the VUT student community.
-        </p>
+        <p>Created for the VUT student community</p>
       </div>
 
     </div>

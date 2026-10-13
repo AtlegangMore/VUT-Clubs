@@ -102,6 +102,87 @@ document.addEventListener("DOMContentLoaded", () => {
     updateClubResults();
   }
 
+  /* ==========================================
+     CLUB MEMBERSHIP DEMO FORM
+  ========================================== */
+
+  const joinModal = document.getElementById("join-club-modal");
+  const joinForm = document.getElementById("club-join-form");
+  const selectedClubName = document.getElementById("selected-club-name");
+  const joinSuccess = document.getElementById("join-success");
+  const joinSuccessMessage = document.getElementById("join-success-message");
+  const joinDoneButton = document.getElementById("join-done");
+  const closeJoinModalButton = document.querySelector(".join-modal-close");
+
+  if (
+    joinModal instanceof HTMLDialogElement &&
+    joinForm instanceof HTMLFormElement &&
+    selectedClubName &&
+    joinSuccess &&
+    joinSuccessMessage &&
+    joinDoneButton &&
+    closeJoinModalButton
+  ) {
+    document.querySelectorAll(".join-club-button").forEach(button => {
+      button.addEventListener("click", () => {
+        const clubName = button.closest(".club-card")
+          ?.querySelector("h3")
+          ?.textContent
+          .trim();
+
+        if (!clubName) {
+          console.error("Unable to determine which club the membership form is for.");
+          return;
+        }
+
+        joinForm.reset();
+        selectedClubName.textContent = clubName;
+        joinSuccess.hidden = true;
+        joinForm.hidden = false;
+        joinModal.showModal();
+      });
+    });
+
+    closeJoinModalButton.addEventListener("click", () => {
+      joinModal.close();
+    });
+
+    joinDoneButton.addEventListener("click", () => {
+      joinModal.close();
+    });
+
+    joinModal.addEventListener("keydown", event => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        joinModal.close();
+      }
+    });
+
+    joinModal.addEventListener("click", event => {
+      if (event.target === joinModal) {
+        joinModal.close();
+      }
+    });
+
+    joinForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      if (!joinForm.reportValidity()) return;
+
+      const firstName =
+        joinForm.elements.namedItem("firstName").value.trim();
+      const lastName =
+        joinForm.elements.namedItem("lastName").value.trim();
+
+      joinSuccessMessage.textContent =
+        `Thanks, ${firstName} ${lastName}! Your demo membership request for ` +
+        `${selectedClubName.textContent} is complete. No information was sent or stored.`;
+      joinForm.hidden = true;
+      joinSuccess.hidden = false;
+      joinDoneButton.focus();
+    });
+  }
+
 
   /* ==========================================
      3. SCROLL ANIMATIONS
@@ -233,6 +314,311 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     counters.forEach(animateCounter);
   }
+
+  /* ==========================================
+     TEAM MEMBER SLIDER
+  ========================================== */
+
+  const teamSlider = document.querySelector(".team-slider");
+  const teamCards = document.querySelectorAll(".team-slider .team-card");
+  const previousTeamButton = document.querySelector(".team-prev");
+  const nextTeamButton = document.querySelector(".team-next");
+  const currentTeamSlide = document.querySelector(".current-slide");
+  const totalTeamSlides = document.querySelector(".total-slides");
+  const teamProgress = document.querySelector(".progress-fill");
+
+  if (
+    teamSlider &&
+    teamCards.length > 0 &&
+    previousTeamButton &&
+    nextTeamButton &&
+    currentTeamSlide &&
+    totalTeamSlides &&
+    teamProgress
+  ) {
+    let currentTeamIndex = 0;
+    let teamIsAnimating = false;
+    let teamAnimationTimer;
+    let pointerStart = null;
+    const animationDuration = reducedMotion ? 0 : 800;
+
+    totalTeamSlides.textContent = String(teamCards.length).padStart(2, "0");
+
+    function updateTeamCards() {
+      teamCards.forEach((card, index) => {
+        let difference = index - currentTeamIndex;
+
+        if (difference > teamCards.length / 2) {
+          difference -= teamCards.length;
+        } else if (difference < -teamCards.length / 2) {
+          difference += teamCards.length;
+        }
+
+        const isActive = difference === 0;
+        card.dataset.position =
+          Math.abs(difference) > 2 ? "hidden" : String(difference);
+        card.classList.toggle("active", isActive);
+        card.setAttribute("aria-hidden", String(!isActive));
+        card.setAttribute("aria-current", String(isActive));
+        card.tabIndex = isActive ? 0 : -1;
+
+        if (isActive) {
+          card.style.removeProperty("--tilt-x");
+          card.style.removeProperty("--tilt-y");
+          card.style.removeProperty("--image-x");
+          card.style.removeProperty("--image-y");
+        }
+      });
+
+      currentTeamSlide.textContent =
+        String(currentTeamIndex + 1).padStart(2, "0");
+      teamProgress.style.width =
+        `${((currentTeamIndex + 1) / teamCards.length) * 100}%`;
+    }
+
+    function showTeamMember(index) {
+      if (teamIsAnimating) return;
+
+      currentTeamIndex =
+        (index + teamCards.length) % teamCards.length;
+      teamIsAnimating = true;
+      updateTeamCards();
+
+      window.clearTimeout(teamAnimationTimer);
+      teamAnimationTimer = window.setTimeout(() => {
+        teamIsAnimating = false;
+      }, animationDuration);
+    }
+
+    function showNextTeamMember() {
+      showTeamMember(currentTeamIndex + 1);
+    }
+
+    function showPreviousTeamMember() {
+      showTeamMember(currentTeamIndex - 1);
+    }
+
+    previousTeamButton.addEventListener("click", showPreviousTeamMember);
+    nextTeamButton.addEventListener("click", showNextTeamMember);
+
+    teamCards.forEach((card, index) => {
+      card.addEventListener("click", () => {
+        if (index !== currentTeamIndex) {
+          showTeamMember(index);
+        }
+      });
+
+      card.addEventListener("pointermove", event => {
+        if (!card.classList.contains("active") || event.pointerType === "touch") {
+          return;
+        }
+
+        const bounds = card.getBoundingClientRect();
+        const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+        const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+
+        card.style.setProperty("--tilt-x", `${y * -8}deg`);
+        card.style.setProperty("--tilt-y", `${x * 10}deg`);
+        card.style.setProperty("--image-x", `${x * -8}px`);
+        card.style.setProperty("--image-y", `${y * -8}px`);
+      });
+
+      card.addEventListener("pointerleave", () => {
+        card.style.removeProperty("--tilt-x");
+        card.style.removeProperty("--tilt-y");
+        card.style.removeProperty("--image-x");
+        card.style.removeProperty("--image-y");
+      });
+    });
+
+    teamSlider.addEventListener("pointerdown", event => {
+      if (event.pointerType === "mouse" && event.button !== 0) return;
+
+      pointerStart = {
+        x: event.clientX,
+        y: event.clientY,
+        id: event.pointerId
+      };
+    });
+
+    teamSlider.addEventListener("pointerup", event => {
+      if (!pointerStart || pointerStart.id !== event.pointerId) return;
+
+      const deltaX = event.clientX - pointerStart.x;
+      const deltaY = event.clientY - pointerStart.y;
+      pointerStart = null;
+
+      if (Math.abs(deltaX) > 45 && Math.abs(deltaX) > Math.abs(deltaY)) {
+        if (deltaX < 0) showNextTeamMember();
+        else showPreviousTeamMember();
+      }
+    });
+
+    teamSlider.addEventListener("pointercancel", () => {
+      pointerStart = null;
+    });
+
+    teamSlider.addEventListener("keydown", event => {
+      if (event.altKey || event.ctrlKey || event.metaKey) return;
+      if (event.target.closest("button")) return;
+
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        showNextTeamMember();
+      } else if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        showPreviousTeamMember();
+      }
+    });
+
+    updateTeamCards();
+  }
+
+  /* ==========================================
+     CAMPUS FACT ROTATOR
+  ========================================== */
+
+  const campusFact = document.getElementById("campus-fact");
+  const campusFacts = [
+    "VUT transitioned into a Technikon in 1979.",
+    "In 2004, VUT became a University of Technology.",
+    "VUT reports close to 20,000 active students."
+  ];
+
+  if (campusFact && !reducedMotion) {
+    let factIndex = 0;
+
+    window.setInterval(() => {
+      campusFact.classList.add("is-changing");
+
+      window.setTimeout(() => {
+        factIndex = (factIndex + 1) % campusFacts.length;
+        campusFact.textContent = campusFacts[factIndex];
+        campusFact.classList.remove("is-changing");
+      }, 350);
+    }, 6000);
+  }
+
+  /* ==========================================
+     COMMUNITY SPOTLIGHT SLIDESHOW
+  ========================================== */
+
+  const spotlightImage = document.querySelector(".spotlight-image > img");
+  const spotlightCaption = document.getElementById("spotlight-caption");
+  const previousSpotlightButton = document.querySelector(".spotlight-prev");
+  const nextSpotlightButton = document.querySelector(".spotlight-next");
+  const spotlightSlides = [
+    {
+      src: "IMAGES/clubs/innovation&entrepreneur.jpeg",
+      alt: "Innovation and Entrepreneurship club",
+      caption: "Innovation & Entrepreneurship"
+    },
+    {
+      src: "IMAGES/clubs/basotho.jpeg",
+      alt: "Basotho Cultural Society",
+      caption: "Basotho Cultural Society"
+    },
+    {
+      src: "IMAGES/clubs/soccerclub.jpeg",
+      alt: "VUT Soccer Club",
+      caption: "VUT Soccer Club"
+    },
+    {
+      src: "IMAGES/clubs/choir.jpeg",
+      alt: "VUT Choir",
+      caption: "VUT Choir"
+    }
+  ];
+
+  if (
+    spotlightImage &&
+    spotlightCaption &&
+    previousSpotlightButton &&
+    nextSpotlightButton
+  ) {
+    let spotlightIndex = 0;
+    let spotlightTimer;
+
+    function showSpotlightSlide(index) {
+      spotlightIndex =
+        (index + spotlightSlides.length) % spotlightSlides.length;
+      const slide = spotlightSlides[spotlightIndex];
+      const fadeDuration = reducedMotion ? 0 : 350;
+
+      window.clearTimeout(spotlightTimer);
+      spotlightImage.classList.add("is-changing");
+
+      spotlightTimer = window.setTimeout(() => {
+        spotlightImage.src = slide.src;
+        spotlightImage.alt = slide.alt;
+        spotlightCaption.textContent = slide.caption;
+        spotlightImage.classList.remove("is-changing");
+
+        if (!reducedMotion) {
+          spotlightTimer = window.setTimeout(
+            () => showSpotlightSlide(spotlightIndex + 1),
+            6000
+          );
+        }
+      }, fadeDuration);
+    }
+
+    previousSpotlightButton.addEventListener("click", () => {
+      showSpotlightSlide(spotlightIndex - 1);
+    });
+
+    nextSpotlightButton.addEventListener("click", () => {
+      showSpotlightSlide(spotlightIndex + 1);
+    });
+
+    if (!reducedMotion) {
+      spotlightTimer = window.setTimeout(
+        () => showSpotlightSlide(spotlightIndex + 1),
+        6000
+      );
+    }
+  }
+
+  /* ==========================================
+     INNER PAGE HERO BACKGROUNDS
+  ========================================== */
+
+  document.querySelectorAll(".hero-slideshow").forEach(slideshow => {
+    const imageLayers = slideshow.querySelectorAll("img");
+    if (imageLayers.length !== 2) return;
+
+    let activeLayer = 0;
+    let currentSlide = 0;
+    imageLayers[activeLayer].src = spotlightSlides[currentSlide].src;
+
+    if (reducedMotion) return;
+
+    function advanceHeroSlideshow() {
+      const nextSlide = (currentSlide + 1) % spotlightSlides.length;
+      const slide = spotlightSlides[nextSlide];
+      const preload = new Image();
+
+      preload.onload = () => {
+        const nextLayer = 1 - activeLayer;
+        imageLayers[nextLayer].src = slide.src;
+        imageLayers[nextLayer].classList.add("is-active");
+        imageLayers[activeLayer].classList.remove("is-active");
+        activeLayer = nextLayer;
+        currentSlide = nextSlide;
+        window.setTimeout(advanceHeroSlideshow, 6000);
+      };
+
+      preload.onerror = () => {
+        console.error(`Unable to load hero slideshow image: ${slide.src}`);
+        currentSlide = nextSlide;
+        window.setTimeout(advanceHeroSlideshow, 6000);
+      };
+
+      preload.src = slide.src;
+    }
+
+    window.setTimeout(advanceHeroSlideshow, 6000);
+  });
 
 
   /* ==========================================
