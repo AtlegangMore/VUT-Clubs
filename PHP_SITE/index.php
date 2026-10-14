@@ -68,7 +68,7 @@
 
       <div class="hero-visual reveal">
         <div class="hero-photo-wrap">
-          <img src="IMAGES/clubs/hero.jpeg" alt="Campus community placeholder photograph">
+          <img src="https://hesc.ny.gov/sites/default/files/styles/optimized/public/2025-01/2025Event-07-936px.jpg?itok=g0H2lt8X" alt="Students gathered around a table, connecting and studying together">
         </div>
 
         <div class="floating-card glass floating-top">

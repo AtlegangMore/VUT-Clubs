@@ -1104,7 +1104,7 @@ button {
 }
 
 .welcome-video-frame {
-  width: 100%;
+  width: min(100%, 960px);
   margin-inline: auto;
   overflow: hidden;
   border: 6px solid rgba(255, 255, 255, 0.9);
