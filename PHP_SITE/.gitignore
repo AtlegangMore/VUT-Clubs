@@ -1,0 +1,32 @@
+# AI agent configuration and local state
+AGENTS.md
+.agents/
+.agent/
+.claude/
+.codex/
+.copilot/
+.cursor/
+.github/agents/
+.github/instructions/
+.github/prompts/
+.github/copilot-instructions.md
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies and generated output
+node_modules/
+dist/
+build/
+coverage/
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo

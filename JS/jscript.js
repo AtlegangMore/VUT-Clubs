@@ -194,6 +194,38 @@ document.addEventListener("DOMContentLoaded", () => {
     "(prefers-reduced-motion: reduce)"
   ).matches;
 
+  const heroDescription = document.getElementById("hero-description");
+
+  if (heroDescription) {
+    const heroMessages = [
+      {
+        language: "en",
+        text: "There's more to university than lectures and assignments. Meet people who share your passions, explore student societies, discover new opportunities and make your campus experience unforgettable."
+      },
+      {
+        language: "st",
+        text: "Univesithi ha se feela ka lithuto le mesebetsi e fanoang. Kopana le batho ba nang le lithahasello tse tšoanang le tsa hao, hlahloba mekhatlo ea baithuti, fumana menyetla e mecha 'me u etse hore boiphihlelo ba hao khampuseng bo se ke ba lebaleha."
+      }
+    ];
+    let activeMessage = 0;
+
+    window.setInterval(() => {
+      activeMessage = (activeMessage + 1) % heroMessages.length;
+      const message = heroMessages[activeMessage];
+      const fadeDuration = reducedMotion ? 0 : 350;
+
+      if (!reducedMotion) {
+        heroDescription.classList.add("is-changing");
+      }
+
+      window.setTimeout(() => {
+        heroDescription.textContent = message.text;
+        heroDescription.lang = message.language;
+        heroDescription.classList.remove("is-changing");
+      }, fadeDuration);
+    }, 15000);
+  }
+
   /*
     Keep content visible by default.
     Only enable hiding after the observer is ready.

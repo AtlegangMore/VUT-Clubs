@@ -1,1 +1,1 @@
-# VUT-Clubs
+# MavutiHub

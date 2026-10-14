@@ -30,3 +30,6 @@ Thumbs.db
 Desktop.ini
 *.swp
 *.swo
+
+#testing scripts
+.ps1
