@@ -731,7 +731,6 @@ $csrfToken = $_SESSION['csrfToken'];
                 <option value="">Select title</option>
                 <option value="Mr">Mr</option>
                 <option value="Ms">Ms</option>
-                <option value="Mx">Mx</option>
                 <option value="Dr">Dr</option>
                 <option value="Prefer not to say">Prefer not to say</option>
               </select>
@@ -796,7 +795,7 @@ $csrfToken = $_SESSION['csrfToken'];
 
           <label class="join-consent">
             <input type="checkbox" name="consent" value="yes" required>
-            <span>I confirm that these details are accurate and agree to email them to the MavutiHub testing inbox at 224158678@edu.vut.ac.za.</span>
+            <span>I confirm that these details are accurate and agree to email them to the MavutiHub testing inbox.</span>
           </label>
 
           <button type="submit" class="btn btn-primary form-submit">

@@ -132,7 +132,7 @@ $csrfToken = $_SESSION['csrfToken'];
 
             <label class="join-consent">
               <input type="checkbox" name="consent" value="yes" required>
-              <span>I agree to send these details to the MavutiHub testing inbox at 224158678@edu.vut.ac.za.</span>
+              <span>I agree to send these details to the MavutiHub testing inbox.</span>
             </label>
 
             <button type="submit" class="btn btn-primary form-submit">
