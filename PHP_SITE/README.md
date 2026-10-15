@@ -29,6 +29,11 @@ php -S localhost:8000 -t .
 
 Open `http://localhost:8000/`. Before testing email, set `MAVUTIHUB_SMTP_USERNAME`, `MAVUTIHUB_MAIL_FROM`, and `MAVUTIHUB_SMTP_PASSWORD` in the same PowerShell session that starts the server. The password should be entered securely at the command prompt and must not be placed in this README or source files. Run envir.ps1 file 1st enter all your information and then run test.ps1 script to start your PHP server and SMTP.
 
+```powershell
+.\envir.ps1
+.\test.ps1
+```
+
 ## Main files
 
 - `index.php`, `explore.php`, `about.php`, `contact.php` — PHP pages for the site.
