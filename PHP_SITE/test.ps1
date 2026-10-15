@@ -10,3 +10,4 @@ foreach ($name in $names) {
     $value = [Environment]::GetEnvironmentVariable($name, 'Process')
     '{0}: {1}' -f $name, $(if ([string]::IsNullOrWhiteSpace($value)) { 'MISSING' } else { 'set' })
 }
+C:\xampp\php\php.exe -S localhost:8000 -t .
